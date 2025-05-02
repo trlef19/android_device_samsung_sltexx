@@ -16,21 +16,21 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   This repository is for LineageOS 14.1 on Samsung Galaxy Alpha (slte)
 
-    THIS IS WORK IN PROGRESS.
+    **THIS IS WORK IN PROGRESS**.
 
 
 * How To Build LineageOS 14.1 for Samsung Galaxy Alpha
 
   - Make a workspace
-
+```
   $ mkdir -p ~/cyanogenmod/system
   $ cd ~/cyanogenmod/system
-
+```
 
   - Do repo init & sync
-
+```
   $ repo init -u git://github.com/LineageOS/android.git -b cm-14.1
-
+```
   - Create .repo/local_manifests/roomservice.xml with the following content:
 
   <?xml version="1.0" encoding="UTF-8"?>
