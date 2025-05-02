@@ -86,6 +86,3 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   LineageOS
   TeamWin
-
-----
-EOF
