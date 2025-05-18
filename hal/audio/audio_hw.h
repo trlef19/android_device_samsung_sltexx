@@ -21,6 +21,7 @@
 #include <hardware/audio.h>
 
 #include <tinyalsa/asoundlib.h>
+
 #include <tinycompress/tinycompress.h>
 
 #include <audio_utils/resampler.h>
@@ -139,7 +140,7 @@ struct stream_out {
     audio_output_flags_t        flags;
     audio_usecase_t             usecase;
     /* Array of supported channel mask configurations. +1 so that the last entry is always 0 */
-    audio_channel_mask_t        supported_channel_masks[MAX_SUPPORTED_CHANNEL_MASKS + 1];
+    audio_channel_mask_t        supported_channel_masks[HDMI_MAX_SUPPORTED_CHANNEL_MASKS + 1];
     bool                        muted;
     /* total frames written, not cleared when entering standby */
     uint64_t                    written;
@@ -147,7 +148,7 @@ struct stream_out {
     audio_io_handle_t           handle;
 
     struct audio_device         *dev;
-}
+};
 
 struct stream_in {
     struct audio_stream_in              stream;
