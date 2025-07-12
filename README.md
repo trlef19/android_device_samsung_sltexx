@@ -24,8 +24,10 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   - Make a workspace
 
-  ```$ mkdir -p ~/cyanogenmod/system
-  $ cd ~/cyanogenmod/system```
+  ```
+  $ mkdir -p ~/cyanogenmod/system
+  $ cd ~/cyanogenmod/system
+  ```
 
 
   - Do repo init & sync
