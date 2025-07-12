@@ -37,25 +37,23 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <manifest>
-      <remote  name="cryptomilk" fetch="git://git.cryptomilk.org/" />
-
-      <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-7.1" />
-
-      <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" />
-
-      <project name="LineageOS/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
-      <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" />
-
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos" path="hardware/samsung_slsi-cm/exynos" />
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos5" path="hardware/samsung_slsi-cm/exynos5" />
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_openmax" path="hardware/samsung_slsi-cm/openmax" />
-      <project name="projects/android/android_hardware_samsung_slsi_exynos5430" path="hardware/samsung_slsi-cm/exynos5430" remote="cryptomilk" />
-
-      <project name="projects/android/android_kernel_samsung_slte.git" path="kernel/samsung/slte" remote="cryptomilk" />
-      <project name="projects/android/android_device_samsung_sltexx.git" path="device/samsung/sltexx" remote="cryptomilk" />
-  </manifest>
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="local" fetch="https://github.com/trlef19" />
+        <remote name="los" fetch="https://github.com/LineageOS" />
+        <remote name="them" fetch="https://github.com/TheMuppets" />
+        <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-11" />
+        <!--project name="android_external_stlport" path="external/stlport" remote="los" /-->
+        <project path="device/samsung/sltexx" name="android_device_samsung_sltexx" remote="local"/>
+        <project path="packages/apps/SamsungServiceMode" name="android_packages_apps_SamsungServiceMode" remote="los" revision="cm-14.1"/>
+        <project path="hardware/samsung" name="android_hardware_samsung" remote="los"/>
+        <project path="hardware/samsung_slsi/exynos" name="android_hardware_samsung_slsi_exynos" remote="los"/>
+        <project path="hardware/samsung_slsi/exynos5" name="android_hardware_samsung_slsi_exynos5" remote="los"/>
+        <project path="hardware/samsung_slsi/openmax" name="android_hardware_samsung_slsi_openmax" remote="los"/>
+        <project path="hardware/samsung_slsi/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local" revision="cm-14.1"/>
+        <project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local" revision="cm-14.1"/>
+        <project path="vendor/samsung" name="proprietary_vendor_samsung" revision="cm-14.1" remote="them" />
+</manifest>
   
   ```
   $ repo sync
