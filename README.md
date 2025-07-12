@@ -57,26 +57,33 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
       <project name="projects/android/android_kernel_samsung_slte.git" path="kernel/samsung/slte" remote="cryptomilk" />
       <project name="projects/android/android_device_samsung_sltexx.git" path="device/samsung/sltexx" remote="cryptomilk" />
   </manifest>
+  
   ```
   $ repo sync
   ```
   - Copy proprietary vendor files
 
   There are two options to to that. Connect your device with adb enabled and run:
-  ```
+  
+ ```
     ./extract-files.sh
  ```
+ 
   Or if you have the system image unpacked on your disk, then simply run:
+
  ```
     STOCK_ROM_DIR=/path/to/system ./extract-files.sh
  ```
+  
   - Setup environment
+
  ```
   $ source build/envsetup.sh
   $ lunch lineage_sltexx-userdebug
  ```
 
   - Build LineageOS
+
 ```
   $ export USE_CCACHE=1
   $ make -j10 bacon
