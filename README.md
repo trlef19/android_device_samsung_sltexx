@@ -36,9 +36,9 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
   ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
-
+```
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest>
+ <manifest>
         <remote name="local" fetch="https://github.com/trlef19" />
         <remote name="los" fetch="https://github.com/LineageOS" />
         <remote name="them" fetch="https://github.com/TheMuppets" />
@@ -53,8 +53,8 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
         <project path="hardware/samsung_slsi/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local" revision="cm-14.1"/>
         <project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local" revision="cm-14.1"/>
         <project path="vendor/samsung" name="proprietary_vendor_samsung" revision="cm-14.1" remote="them" />
-</manifest>
-  
+ </manifest>
+  ```
   ```
   $ repo sync
   ```
