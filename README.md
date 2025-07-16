@@ -48,8 +48,8 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
         <project path="hardware/samsung_slsi/exynos" name="android_hardware_samsung_slsi_exynos" remote="los"/>
         <project path="hardware/samsung_slsi/exynos5" name="android_hardware_samsung_slsi_exynos5" remote="los"/>
         <project path="hardware/samsung_slsi/openmax" name="android_hardware_samsung_slsi_openmax" remote="los"/>
-        <project path="hardware/samsung_slsi/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local" revision="cm-14.1"/>
-        <project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local" revision="cm-14.1"/>
+        <project path="hardware/samsung_slsi/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local"/>
+        <project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local"/>
         <project path="vendor/samsung" name="proprietary_vendor_samsung" revision="cm-14.1" remote="them" />
  </manifest>
   ```
