@@ -265,7 +265,24 @@ PRODUCT_PACKAGES += \
 	mcDriverDaemon \
 	libstlport \
 	keystore.exynos5
+PRODUCT_PACKAGES_ENG += \
+	libMcClient \
+	mcDriverDaemon \
+	libMcRegistry \
+	libgdmcprov \
+	provisioningagent \
+	libcommonpawrapper \
+	rootpa_interface \
+	MobiCoreTlcm
+#######################################################
+DISPLAY
+#####################################################
 
+PRODUCT_PACKAGES_ENG += \
+	libdisplaymodule \
+	libhdmimodule \
+	libhwcutilsmodule \
+	libvirtualdisplaymodule
 ###########################################################
 ### PACKAGES
 ###########################################################
@@ -274,6 +291,12 @@ PRODUCT_PACKAGES += \
 	SamsungServiceMode \
 	Torch \
 	su
+
+######################################################
+##SELINUX
+##################################################
+PRODUCT_PACKAGES_ENG += \
+	prebuilt_file_contexts
 
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product-if-exists, build/target/product/full.mk)
