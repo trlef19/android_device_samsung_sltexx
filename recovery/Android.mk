@@ -20,7 +20,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := init.recovery.usb.rc
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE_CLASS := EXECUTABLES
 
 # Cannot send to TARGET_RECOVERY_ROOT_OUT since build system wipes init*.rc
