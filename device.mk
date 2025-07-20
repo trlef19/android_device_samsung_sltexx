@@ -276,7 +276,7 @@ PRODUCT_PACKAGES_ENG += \
 	rootpa_interface \
 	MobiCoreTlcm
 #######################################################
-DISPLAY
+### DISPLAY
 #####################################################
 
 PRODUCT_PACKAGES_ENG += \
