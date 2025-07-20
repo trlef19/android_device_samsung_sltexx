@@ -40,8 +40,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
         <remote name="local" fetch="https://github.com/trlef19" />
         <remote name="los" fetch="https://github.com/LineageOS" />
         <remote name="them" fetch="https://github.com/TheMuppets" />
-        <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-11" />
-        <!--project name="android_external_stlport" path="external/stlport" remote="los" /-->
+        <project name="android_external_stlport" path="external/stlport" remote="los" revision="lineage-15.1" />
         <project path="device/samsung/sltexx" name="android_device_samsung_sltexx" remote="local"/>
         <project path="packages/apps/SamsungServiceMode" name="android_packages_apps_SamsungServiceMode" remote="los" revision="cm-14.1"/>
         <project path="hardware/samsung" name="android_hardware_samsung" remote="los"/>
