@@ -177,8 +177,6 @@ PRODUCT_PACKAGES += \
 	libOMX.Exynos.MPEG4.Encoder \
 	libOMX.Exynos.VP8.Encoder
 
-PRODUCT_PACKAGES_REMOVE += libdrmclearkeyplugin
-
 PRODUCT_PACKAGES += \
 	libOMX.Exynos.AAC.Decoder \
 	libOMX.Exynos.MP3.Decoder \
