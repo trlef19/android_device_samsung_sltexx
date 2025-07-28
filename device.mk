@@ -292,8 +292,7 @@ PRODUCT_PACKAGES_ENG += \
 
 PRODUCT_PACKAGES += \
 	SamsungServiceMode \
-	Torch \
-	su
+	Torch
 
 ######################################################
 ##SELINUX
