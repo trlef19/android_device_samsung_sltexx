@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/recovery/init.recovery.universal5430.rc:root/init.recovery.universal5430.rc
 
 ###########################################################
-### PERMISSONS
+### PERMISSIONS
 ###########################################################
 
 PRODUCT_COPY_FILES += \
@@ -176,6 +176,8 @@ PRODUCT_PACKAGES += \
 	libOMX.Exynos.AVC.Encoder \
 	libOMX.Exynos.MPEG4.Encoder \
 	libOMX.Exynos.VP8.Encoder
+
+PRODUCT_PACKAGES_REMOVE += libdrmclearkeyplugin
 
 PRODUCT_PACKAGES += \
 	libOMX.Exynos.AAC.Decoder \
