@@ -112,8 +112,8 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant
 
 # external/wpa_supplicant_8/wpa_supplicant/wpa_supplicant_conf.mk
-PRODUCT_PACKAGES += \
-	wpa_supplicant.conf
+#PRODUCT_PACKAGES += \
+	#wpa_supplicant.conf
 
 ###########################################################
 ### BLUETOOTH
