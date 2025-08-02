@@ -1,24 +1,45 @@
-type gpsd, domain; #new
-type gpsd_exec, exec_type, file_type; #new
+#type gpsd, domain; #new
+#type gpsd_exec, exec_type, file_type; #new
 
 # Automatically label files created in /data/system/gps as gps_data_file
-file_type_auto_trans(gpsd, system_data_file, gps_data_file)
+#file_type_auto_trans(gpsd, system_data_file, gps_data_file)
 
 # Allow rild to connect to gpsd
-unix_socket_connect(gpsd, property, rild)
+#unix_socket_connect(gpsd, property, rild)
 
-allow gpsd system_server:unix_stream_socket { read write setopt };
+#allow gpsd system_server:unix_stream_socket { read write setopt };
 
-binder_call(gpsd, system_server)
-binder_use(gpsd)
+#binder_call(gpsd, system_server)
+#binder_use(gpsd)
 
-allow gpsd self:netlink_kobject_uevent_socket create_socket_perms;
+#allow gpsd self:netlink_kobject_uevent_socket create_socket_perms;
 
-allow gpsd gps_device:chr_file { getattr setattr };
+#allow gpsd gps_device:chr_file { getattr setattr };
 #allow gpsd gps_data_file:dir { search write add_name remove_name };
 #allow gpsd gps_data_file:file { create rw_file_perms };
 #allow gpsd gps_data_file:fifo_file { unlink create setattr getattr rw_file_perms };
 
-allow gpsd sysfs_wake_lock:file rw_file_perms;
+#allow gpsd sysfs_wake_lock:file rw_file_perms;
 
-allow gpsd sensorservice_service:service_manager { find };
+#allow gpsd sensorservice_service:service_manager { find };
+
+# gpsd.te - exynos5420
+
+allow gpsd system_data_file:dir create_dir_perms;
+
+allow gpsd gps_data_file:dir create_dir_perms;
+allow gpsd gps_data_file:file create_file_perms;
+
+allow gpsd gps_data_file:fifo_file create_file_perms;
+
+allow gpsd bt_device:chr_file rw_file_perms;
+allow gpsd gps_device:chr_file rw_file_perms;
+
+allow gpsd sysfs_sec_gps:dir r_dir_perms;
+allow gpsd sysfs_gps:file rw_file_perms;
+
+allow gpsd sensorservice_service:service_manager find;
+
+allow gpsd system_server:unix_stream_socket rw_socket_perms;
+
+binder_call(gpsd, servicemanager)
