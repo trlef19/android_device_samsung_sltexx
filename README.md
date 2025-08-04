@@ -39,7 +39,6 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
  <manifest>
         <remote name="local" fetch="https://github.com/trlef19" />
         <remote name="los" fetch="https://github.com/LineageOS" />
-        <remote name="them" fetch="https://github.com/TheMuppets" />
         <project path="device/samsung/sltexx" name="android_device_samsung_sltexx" remote="local"/>
         <project path="packages/apps/SamsungServiceMode" name="android_packages_apps_SamsungServiceMode" remote="los" revision="cm-14.1"/>
         <project path="hardware/samsung" name="android_hardware_samsung" remote="los"/>
@@ -48,7 +47,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
         <project path="hardware/samsung_slsi/openmax" name="android_hardware_samsung_slsi_openmax" remote="los"/>
         <project path="hardware/samsung_slsi/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local"/>
         <project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local"/>
-        <project path="vendor/samsung" name="proprietary_vendor_samsung" revision="cm-14.1" remote="them" />
+        <project path="vendor/samsung/sltexx" name="android_vendor_samsung_sltexx" remote="local" />
  </manifest>
   ```
   ```
