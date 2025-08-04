@@ -261,14 +261,14 @@ PRODUCT_PACKAGES += \
 ###########################################################
 
 PRODUCT_PACKAGES += \
-	mcDriverDaemon \
-	libstlport \
+	#mcDriverDaemon \
+	#libstlport \
 	keystore.exynos5
 
 PRODUCT_PACKAGES_ENG += \
-	libMcClient \
-	mcDriverDaemon \
-	libMcRegistry \
+	#libMcClient \
+	#mcDriverDaemon \
+	#libMcRegistry \
 	libgdmcprov \
 	provisioningagent \
 	libcommonpawrapper \
