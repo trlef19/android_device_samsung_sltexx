@@ -163,6 +163,9 @@ lib/libsec-ril.so
 
 ### Mobicore
 bin/cs
+bin/mcDriverDaemon:vendor/bin/mcDriverDaemon
+lib/libMcClient.so:vendor/lib/libMcClient.so
+lib/libMcRegistry.so:vendor/lib/libMcRegistry.so
 app/FFFFFFFF000000000000000000000001.drbin
 app/mcRegistry/00060308060501020000000000000000.tlbin
 app/mcRegistry/02010000080300030000000000000000.tlbin
