@@ -139,6 +139,9 @@ vendor/lib/libmalicore.bc
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/libRSDriverArm.so
 
+### STLport (Camera/RIL) - local compile LineageOS/external/stlport@984b8432
+vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
+
 ### Sensors
 lib/hw/sensors.universal5430.so
 lib/libinvensense_hal.so
