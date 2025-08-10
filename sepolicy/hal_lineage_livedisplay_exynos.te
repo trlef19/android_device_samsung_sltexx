@@ -1,4 +1,9 @@
 # hal_lineage_livedisplay_exynos.te
+#mine
+type display_vendor_data_file, dir_type;
+
+
+
 
 allow hal_lineage_livedisplay_exynos {
     sysfs_graphics
