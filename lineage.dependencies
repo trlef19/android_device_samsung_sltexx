@@ -22,5 +22,9 @@
     {
         "repository": "android_kernel_samsung_slte",
         "target_path": "kernel/samsung/slte"
+    },
+    {
+        "repository": "android_device_samsung_slsi_sepolicy",
+        "target_path": "device/samsung_slsi/sepolicy"
     }
 ]
