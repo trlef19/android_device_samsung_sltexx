@@ -1,5 +1,6 @@
 # hal_lineage_livedisplay_exynos.te
 #mine
+attribute dir_type;
 type display_vendor_data_file, dir_type;
 
 
