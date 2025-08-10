@@ -9,12 +9,14 @@ TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-# Platform
+# ---Platform---
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SLSI_VARIANT := bsp
 TARGET_SOC := exynos5430
 
-# CPU
+
+
+# ---CPU---
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -22,10 +24,14 @@ TARGET_CPU_VARIANT := cortex-a15
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
+
+
 # system/core libcutils
 ENABLE_SCHEDBOOST := true
 
-# RENDERSCRIPT
+
+
+#---RENDERSCRIPT---
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
 #OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
@@ -39,7 +45,9 @@ ifeq ($(HOST_OS),linux)
 endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
-# BOOT
+
+
+#---BOOT---
 TARGET_BOOTLOADER_BOARD_NAME := universal5430
 
 BOARD_KERNEL_BASE := 0x10000000
@@ -70,15 +78,15 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
-### INCLUDE OVERRIDES
+#---INCLUDE OVERRIDES---
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
-### GRAPHICS
+#---GRAPHICS---
 USE_OPENGL_RENDERER := true
 # hwcomposer insignal
 BOARD_HDMI_INCAPABLE := true
 
-# mixer
+#---Mixer---
 BOARD_USE_BGRA_8888 := true
 
 ### SURFACEFLINGER
@@ -124,18 +132,26 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Use Exynos BGRA mixer
 BOARD_USE_BGRA_8888 := true
 
-# GSC
+
+
+#---GSC---
 #BOARD_USES_ONLY_GSC0_GSC1 := true
 
-# SCREEN CASTING
+
+
+# ---SCREEN CASTING---
 BOARD_USES_WFD := true
 
-### BOOT ANIMATION
+
+
+#---BOOT ANIMATION---
 # frameworks/base/cmds/bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
-### OMX (insignal)
+
+
+#---OMX (insignal)---
 BOARD_USE_DMA_BUF := true
 BOARD_USE_IMPROVED_BUFFER := true
 BOARD_USE_STOREMETADATA := true
@@ -148,15 +164,15 @@ BOARD_USE_HEVC_HWIP := true
 
 BOARD_USE_GSC_RGB_ENCODER := true
 BOARD_USE_ENCODER_RGBINPUT_SUPPORT := true
-
 BOARD_USE_VP8ENC_SUPPORT := true
 BOARD_USE_HEVCDEC_SUPPORT := true
-
 BOARD_USE_WMA_CODEC := true
 BOARD_USE_ALP_AUDIO := true
 BOARD_USE_SEIREN_AUDIO := true
 
-# WIFI
+
+
+#---WIFI---
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
@@ -168,21 +184,22 @@ WIFI_DRIVER_NVRAM_PATH_PARAM     := "/sys/module/dhd/parameters/nvram_path"
 WIFI_DRIVER_NVRAM_PATH           := "/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_FW_PATH_STA          := "/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/etc/wifi/bcmdhd_apsta.bin"
-# MACLOADER
+
+#---MACLOADER---
 BOARD_HAVE_SAMSUNG_WIFI := true
 
-# BLUETOOTH
+#---BLUETOOTH---
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-### NFC
+#---NFC---
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := $(TARGET_BOOTLOADER_BOARD_NAME)
 
-### CAMERA
+#---CAMERA---
 # frameworks/av/services/camera/libcameraservice
 BOARD_NEEDS_MEMORYHEAPION := true
 # hardware/samsung_slsi-cm/exynos5/libgscaler
@@ -202,13 +219,19 @@ BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 # frameworks/av/{cameraserver,libstagefright,mediaserver}
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
-### LIGHTS
+
+
+#---LIGHTS---
 TARGET_PROVIDES_LIBLIGHT := false
 
-### POWER
+
+
+#---POWER---
 TARGET_POWERHAL_VARIANT := samsung
 
-### CHARGER
+
+
+#---CHARGER---
 WITH_CM_CHARGER := true
 # system/core/init/Android.mk
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
@@ -221,7 +244,9 @@ BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
-### RIL
+
+
+#---RIL---
 BOARD_VENDOR := samsung
 BOARD_PROVIDES_LIBRIL := true
 # hardware/samsung/ril
@@ -232,34 +257,44 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 #TARGET_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 TARGET_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
-### SENSORS
+#---SENSORS---
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
-### FONTS
+#---FONTS---
 EXTENDED_FONT_FOOTPRINT := true
 
-### CMHW
+#---CMHW---
 BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
-### SELINUX
+
+
+#---SELINUX---
 BOARD_SEPOLICY_DIRS := \
     $(LOCAL_PATH)/sepolicy
+include device/lineage/sepolicy/exynos/sepolicy.mk
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+include device/samsung_slsi/sepolicy/sepolicy.mk
+#BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+# For legacy HAL1 camera
+SELINUX_IGNORE_NEVERALLOWS := true
 
-### SECCOMP
+
+#---SECCOMP---
 # frameworks/av/services/{mediacodec,mediaextractor}/minijail
 BOARD_SEPOLICY_DIRS += \
     $(LOCAL_PATH)/seccomp
 
-###########################################################
-### CYANOGEN RECOVERY
-###########################################################
+
+
+#---LINEAGE RECOVERY---
 
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal5430
 BOARD_HAS_DOWNLOAD_MODE := true
 
-###########################################################
-### TWRP RECOVERY
-###########################################################
+
+
+#---TWRP RECOVERY---
 
 #RECOVERY_VARIANT := twrp
 #TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
