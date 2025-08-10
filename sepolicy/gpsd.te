@@ -1,4 +1,4 @@
-type gpsd, domain; #new
+#type gpsd, domain; #new
 type gpsd_exec, exec_type, file_type; #new
 
 # Automatically label files created in /data/system/gps as gps_data_file
