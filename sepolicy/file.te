@@ -20,5 +20,6 @@ type sysfs_mipi_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_multipdp_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_usb_power_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_vibrator_writeable, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_graphics, sysfs_type, fs_type, mlstrustedobject;
 
 allow sysfs_type tmpfs:filesystem associate;
