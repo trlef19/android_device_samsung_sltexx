@@ -24,7 +24,7 @@
 #allow gpsd sensorservice_service:service_manager { find };
 allow gpsd system_data_file:dir create_dir_perms;
 
-#allow gpsd gps_data_file:dir create_dir_perms;
+allow gpsd gps_data_file:dir create_dir_perms;
 allow gpsd gps_data_file:file create_file_perms;
 
 allow gpsd gps_data_file:fifo_file create_file_perms;
