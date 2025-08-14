@@ -79,14 +79,14 @@ on post-fs-data
 
     # Permissions for bluetooth
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth net_bt_stack ro.bt.bdaddr_path
-    chown radio net_bt_stack /efs/bluetooth/bt_addr
+    chown bluetooth bluetooth ro.bt.bdaddr_path
+    chown radio bluetooth /efs/bluetooth/bt_addr
     chmod 0640 /efs/bluetooth/bt_addr
-    chown bluetooth net_bt_stack /dev/ttySAC3
+    chown bluetooth bluetooth /dev/ttySAC3
     chmod 0660 /dev/ttySAC3
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
-    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
 
 # MSP FactoryApp
     mkdir /efs/FactoryApp 0775 system system
@@ -231,7 +231,7 @@ on fs
     mkdir /persdata/absolute 0750 system system
 
     wait /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA
-    check_fs /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA ext4
+    fsck /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA ext4
     mount ext4 /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA /persdata/absolute nosuid nodev barrier=1
 
     chown system system /persdata
@@ -813,14 +813,14 @@ service qmuxd /system/bin/qmuxd
 service diag_mdlog_start /system/bin/diag_mdlog
     class late_start
     user sdcard_rw
-    group system qcom_diag sdcard_rw sdcard_r media_rw
+    group system sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
 service diag_mdlog_stop /system/bin/diag_mdlog -k
     class late_start
     user sdcard_rw
-    group system qcom_diag sdcard_rw sdcard_r media_rw
+    group system sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
