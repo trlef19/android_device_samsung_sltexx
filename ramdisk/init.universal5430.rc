@@ -231,7 +231,7 @@ on fs
     mkdir /persdata/absolute 0750 system system
 
     wait /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA
-    fsck /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA ext4
+    #check_fs /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA ext4 #not supported anymore
     mount ext4 /dev/block/platform/15540000.dwmmc0/by-name/PERSDATA /persdata/absolute nosuid nodev barrier=1
 
     chown system system /persdata
