@@ -39,7 +39,7 @@
 ####################################
 # efs files
 /efs/FactoryApp(/.*)?        u:object_r:app_efs_file:s0
-/efs/FactoryApp/baro_delta   u:object_r:baro_delta_factoryapp_efs_file:s0
+#/efs/FactoryApp/baro_delta   u:object_r:baro_delta_factoryapp_efs_file:s0
 /efs/FactoryApp/factorymode  u:object_r:factorymode_factoryapp_efs_file:s0
 /efs/FactoryApp/fdata        u:object_r:radio_factoryapp_efs_file:s0
 /efs/FactoryApp/hist_nv      u:object_r:radio_factoryapp_efs_file:s0
