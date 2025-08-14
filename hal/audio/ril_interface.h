@@ -17,8 +17,18 @@
 #ifndef RIL_INTERFACE_H
 #define RIL_INTERFACE_H
 
-#include <telephony/ril.h>
-#include "secril-client.h"
+#include <samsung_audio.h>
+#include <secril-client.h>
+
+/**
+ * @brief The callback to change to wideband which should
+ * be implemented by the audio HAL.
+ *
+ * @param[in]  data          User data poiner
+ * @param[in]  wb_amr_type   0 = disable WB, 1 = enable WB,
+ *                           2 = WB (and probably NS)
+ */
+typedef void (*ril_wb_amr_callback)(void *data, int wb_amr_type);
 
 struct ril_handle
 {
@@ -48,6 +58,8 @@ int ril_set_two_mic_control(struct ril_handle *ril,
                             enum __TwoMicSolDevice device,
                             enum __TwoMicSolReport report);
 
-void ril_register_set_wb_amr_callback(void *function, void *data);
+int ril_set_wb_amr_callback(struct ril_handle *ril,
+                            ril_wb_amr_callback fn,
+                            void *data);
 
 #endif
