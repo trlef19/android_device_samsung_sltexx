@@ -5,8 +5,8 @@
 #type cpk_efs_file, file_type;
 type drm_efs_file, file_type;
 #type factorymode_factoryapp_efs_file, file_type;
-#type imei_efs_file, file_type;
-#type prov_efs_file, file_type;
+type imei_efs_file, file_type;
+type prov_efs_file, file_type;
 type radio_factoryapp_efs_file, file_type;
 type sensor_efs_file, file_type;
 #type wifi_efs_file, file_type;
