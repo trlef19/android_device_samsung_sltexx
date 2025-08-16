@@ -28,7 +28,7 @@ include $(BUILD_SHARED_LIBRARY)
 ### GPSD
 include $(CLEAR_VARS)
 
-LOCAL_SHARED_LIBRARIES := libgui liblog libutils
+LOCAL_SHARED_LIBRARIES := libgui liblog libutils libsensor
 LOCAL_SRC_FILES := gpsd.cpp
 LOCAL_MODULE := libshim_gpsd
 LOCAL_MODULE_TAGS := optional
