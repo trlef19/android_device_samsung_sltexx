@@ -247,8 +247,8 @@
 /dev/sdp_mm	u:object_r:knox_dar_device:s0
 
 /dev/media[0-3]*	u:object_r:camera_device:s0
-/dev/mobicore	u:object_r:mobicore_device:s0
-/dev/mobicore-user	u:object_r:mobicore-user_device:s0
+#/dev/mobicore	u:object_r:mobicore_device:s0
+#/dev/mobicore-user	u:object_r:mobicore-user_device:s0
 /dev/pipes(/.*)?    u:object_r:system_fifo:s0
 /dev/pn547		u:object_r:nfc_device:s0
 #fix build error - duplicate definition
@@ -351,8 +351,8 @@
 ############################# 
 # EFS file
 #
-/efs/bluetooth(/.*)?	u:object_r:bluetooth_efs_file:s0
-/efs/imei(/.*)?	u:object_r:imei_efs_file:s0
+#/efs/bluetooth(/.*)?	u:object_r:bluetooth_efs_file:s0
+#/efs/imei(/.*)?	u:object_r:imei_efs_file:s0
 /efs/FactoryApp(/.*)?	u:object_r:app_efs_file:s0
 /efs/wifi(/.*)?	u:object_r:wifi_efs_file:s0
 
