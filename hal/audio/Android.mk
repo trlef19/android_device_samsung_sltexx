@@ -21,7 +21,10 @@ LOCAL_MODULE := audio.primary.$(TARGET_BOOTLOADER_BOARD_NAME)
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := audio_hw.c ril_interface.c
+LOCAL_SRC_FILES := audio_hw.c \
+	ril_interface.c \
+	compress_offload.c \
+	voice.c
 
 ifeq ($(BOARD_HDMI_INCAPABLE), true)
 	LOCAL_CFLAGS += -DHDMI_INCAPABLE
