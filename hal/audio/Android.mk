@@ -37,6 +37,7 @@ LOCAL_C_INCLUDES += \
 	$(call include-path-for, audio-utils) \
 	$(call include-path-for, audio-route) \
 	external/tinycompress/include	\
+	hardware/libhardware/include \
 	hardware/samsung/ril/libsecril-client
 
 LOCAL_ADDITIONAL_DEPENDENCIES += \
@@ -50,6 +51,8 @@ LOCAL_SHARED_LIBRARIES := \
 	libaudioutils \
 	libdl \
 	libaudioroute \
+	libhardware \
+	libprocessgroup \
 	libsecril-client
 
 include $(BUILD_SHARED_LIBRARY)
