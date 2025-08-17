@@ -65,7 +65,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
 ```
   $ export USE_CCACHE=1
-  $ make -j10 bacon
+  $ brunch sltexx
 ```
 
 * Thanks to
