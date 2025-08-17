@@ -302,8 +302,8 @@ BOARD_HAS_DOWNLOAD_MODE := true
 
 #---TWRP RECOVERY---
 
-#RECOVERY_VARIANT := twrp
-#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
 
 TW_THEME := portrait_hdpi
 
@@ -311,7 +311,7 @@ TW_THEME := portrait_hdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "BRGA_8888"
 TARGET_RECOVERY_DEVICE_MODULES += prebuilt_file_contexts init.recovery.usb.rc
 
-TARGET_OTA_ASSERT_DEVICE := sltexx,slte,,slteskt
+TARGET_OTA_ASSERT_DEVICE := sltexx,slte,slteskt
 
 # Add logcat support
 TWRP_INCLUDE_LOGCAT := true
