@@ -66,7 +66,6 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_KERNEL_IMAGE_NAME := zImage
-#TARGET_PREBUILT_KERNEL := device/samsung/slte/kernel
 TARGET_KERNEL_CONFIG := cm_exynos5430-slte_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/slte
 # hardware/samsung_slsi/exynos/libhdmi_legacy
@@ -213,13 +212,10 @@ BOARD_USES_SCALER := true
 BOARD_USES_DT := true
 BOARD_USES_DT_SHORTNAME := true
 # frameworks/av/camera, camera blob support
-#TARGET_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 TARGET_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 # frameworks/av/media/libstagefright, for libwvm.so
-#TARGET_GLOBAL_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 TARGET_CFLAGS += -DADD_LEGACY_ACQUIRE_BUFFER_SYMBO
 # frameworks/av/media/libstagefright
-#TARGET_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
 TARGET_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
 BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 # frameworks/av/{cameraserver,libstagefright,mediaserver}
@@ -318,7 +314,6 @@ TARGET_OTA_ASSERT_DEVICE := sltexx,slte,,slteskt
 TWRP_INCLUDE_LOGCAT := true
 # Use toolbox instead of busybox
 TW_USE_TOOLBOX := true
-
 TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 TW_MAX_BRIGHTNESS := 255
 
