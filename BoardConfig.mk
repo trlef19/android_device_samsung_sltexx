@@ -303,8 +303,8 @@ BOARD_RAMDISK_USE_XZ := true
 
 #---TWRP RECOVERY---
 
-RECOVERY_VARIANT := twrp
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
+#RECOVERY_VARIANT := twrp
+#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/twrp.fstab
 
 TW_THEME := portrait_hdpi
 
