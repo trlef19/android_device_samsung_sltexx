@@ -1,7 +1,9 @@
 Device configuration for the Samsung Galaxy Alpha
 
 Copyright (C) 2014-2015 The LineageOS Project
+
 Copyright (C) 2017      The LineageOS Project
+
 Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,7 +53,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
  </manifest>
   ```
   ```
-  $ repo sync
+  $ repo sync -j8
   ```
   
   - Setup environment
