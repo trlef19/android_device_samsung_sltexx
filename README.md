@@ -1,7 +1,9 @@
 Device configuration for the Samsung Galaxy Alpha
 
 Copyright (C) 2014-2015 The LineageOS Project
+
 Copyright (C) 2017      The LineageOS Project
+
 Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -55,32 +57,36 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
       <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
   </manifest>
 
-  $ repo sync
 
+```
+  $ repo sync
+```
   - Setup environment
 
+```
   $ source build/envsetup.sh
   $ lunch lineage_sltexx-userdebug
-
+```
 
   - Build LineageOS
 
+```
   $ export USE_CCACHE=1
   $ make -j10 bacon
-
+```
 
 
 
   - If you ever need to copy proprietary vendor files
 
   There are two options to to that. Connect your device with adb enabled and run:
-
+```
     ./extract-files.sh
-
+```
   Or if you have the system image unpacked on your disk, then simply run:
-
+```
     STOCK_ROM_DIR=/path/to/system ./extract-files.sh
-
+```
 
 * Thanks to
 
