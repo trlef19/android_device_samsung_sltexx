@@ -67,9 +67,10 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   - Build LineageOS
 
+```
   $ export USE_CCACHE=1
   $ make -j10 bacon
-
+```
 
 
 
@@ -77,12 +78,14 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   There are two options to to that. Connect your device with adb enabled and run:
 
+```
     ./extract-files.sh
-
+```
   Or if you have the system image unpacked on your disk, then simply run:
 
+```
     STOCK_ROM_DIR=/path/to/system ./extract-files.sh
-
+```
 
 * Thanks to
 
