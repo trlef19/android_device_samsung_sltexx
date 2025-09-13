@@ -29,7 +29,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # system/core libcutils
 ENABLE_SCHEDBOOST := true
 
-
+BUILD_BROKEN_DUP_RULES := true
 
 #---RENDERSCRIPT---
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
