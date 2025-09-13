@@ -16,24 +16,24 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
 * Description
 
-  This repository is for LineageOS 14.1 on Samsung Galaxy Alpha (slte)
+  This repository is for LineageOS 15.0 on Samsung Galaxy Alpha (slte)
 
     THIS IS WORK IN PROGRESS.
 
 
-* How To Build LineageOS 14.1 for Samsung Galaxy Alpha
+* How To Build LineageOS 15.0 for Samsung Galaxy Alpha
 
   - Make a workspace
 
 ```
-  $ mkdir -p ~/cyanogenmod/system
-  $ cd ~/cyanogenmod/system
+  $ mkdir -p ~/android/lineage
+  $ cd ~/android/lineage
 ```
 
   - Do repo init & sync
 
 ```
-  $ repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+  $ repo init -u https://github.com/LineageOS/android.git -b lineage-15.0 --git-lfs --no-clone-bundle
 ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
@@ -41,18 +41,18 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 ```
   <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-      <remote  name="cryptomilk" fetch="git://git.cryptomilk.org/" />
-      <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-7.1" />
+      <remote  name="trlef" fetch="https://github.com/trlef19" />
+      <project name="omnirom/android_bootable_recovery" path="bootable/recovery-twrp" remote="github" revision="android-8.0" />
       <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" />
       <project name="LineageOS/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" />
       <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" />
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos" path="hardware/samsung_slsi-cm/exynos" />
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos5" path="hardware/samsung_slsi-cm/exynos5" />
-      <project name="LineageOS/android_hardware_samsung_slsi-cm_openmax" path="hardware/samsung_slsi-cm/openmax" />
-      <project name="projects/android/android_hardware_samsung_slsi_exynos5430" path="hardware/samsung_slsi-cm/exynos5430" remote="cryptomilk" />
-      <project name="projects/android/android_kernel_samsung_slte.git" path="kernel/samsung/slte" remote="cryptomilk" />
-      <project name="projects/android/android_device_samsung_sltexx.git" path="device/samsung/sltexx" remote="cryptomilk" />
-      <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+      <project name="LineageOS/android_hardware_samsung_slsi_exynos" path="hardware/samsung_slsi/exynos" />
+      <project name="LineageOS/android_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" />
+      <project name="LineageOS/android_hardware_samsung_slsi_openmax" path="hardware/samsung_slsi/openmax" />
+      <project name="android_hardware_samsung_slsi_exynos5430" path="hardware/samsung_slsi/exynos5430" remote="trlef" />
+      <project name="android_kernel_samsung_slte" path="kernel/samsung/slte" remote="trlef" />
+      <project name="android_device_samsung_sltexx" path="device/samsung/sltexx" remote="trlef" />
+      <project name="proprietary_vendor_samsung_sltexx" path="vendor/samsung/sltexx" remote="trlef" revision="lineage-18.1"/>
   </manifest>
 ```
 ```
