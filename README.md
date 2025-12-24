@@ -18,6 +18,8 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
 ## If this is your first time building LineageOS, take a look [here](https://wiki.lineageos.org/devices/mata/build/)
 
+   
+   
    **THIS IS WORK IN PROGRESS.**
 
 
@@ -27,6 +29,8 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   ```console
   mkdir -p ~/android/lineage
+  ```
+  ```console
   cd ~/android/lineage
   ```
 
@@ -34,7 +38,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
   - Do repo init & sync
 
   ```console
-  repo init -u git://github.com/LineageOS/android.git -b ineage-18.1 --git-lfs --no-clone-bundle
+  repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs --no-clone-bundle
   ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
@@ -62,13 +66,14 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
  ```console
   source build/envsetup.sh
+```
+```console
   lunch lineage_sltexx-userdebug
  ```
 
   - Build LineageOS
 
 ```console
-  export USE_CCACHE=1
   brunch sltexx
 ```
 
@@ -76,6 +81,3 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   LineageOS
   TeamWin
-
-----
-EOF
