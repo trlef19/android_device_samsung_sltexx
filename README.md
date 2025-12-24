@@ -38,7 +38,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
   ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
  <manifest>
         <remote name="local" fetch="https://github.com/trlef19" />
