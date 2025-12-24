@@ -16,6 +16,8 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   This repository is for LineageOS 18.1 on Samsung Galaxy Alpha (slte)
 
+* If this is your first time building lineage os, take a look [here](https://wiki.lineageos.org/devices/mata/build/)
+
     **THIS IS WORK IN PROGRESS.**
 
 
