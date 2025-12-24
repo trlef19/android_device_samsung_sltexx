@@ -25,16 +25,16 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
 
   - Make a workspace
 
-  ```
-  $ mkdir -p ~/android/lineage
-  $ cd ~/android/lineage
+  ```console
+  mkdir -p ~/android/lineage
+  cd ~/android/lineage
   ```
 
 
   - Do repo init & sync
 
-  ```
-  $ repo init -u git://github.com/LineageOS/android.git -b ineage-18.1 --git-lfs --no-clone-bundle
+  ```console
+  repo init -u git://github.com/LineageOS/android.git -b ineage-18.1 --git-lfs --no-clone-bundle
   ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
@@ -54,22 +54,22 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
         <project path="vendor/samsung/sltexx" name="android_vendor_samsung_sltexx" remote="local" />
  </manifest>
   ```
-  ```
-  $ repo sync -j8
+  ```console
+  repo sync -j8
   ```
   
   - Setup environment
 
- ```
-  $ source build/envsetup.sh
-  $ lunch lineage_sltexx-userdebug
+ ```console
+  source build/envsetup.sh
+  lunch lineage_sltexx-userdebug
  ```
 
   - Build LineageOS
 
-```
-  $ export USE_CCACHE=1
-  $ brunch sltexx
+```console
+  export USE_CCACHE=1
+  brunch sltexx
 ```
 
 * Thanks to
