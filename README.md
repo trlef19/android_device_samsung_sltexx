@@ -38,7 +38,7 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
   - Do repo init & sync
 
   ```console
-  repo init -u git://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs --no-clone-bundle
+  repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs --no-clone-bundle
   ```
   
   - Create .repo/local_manifests/roomservice.xml with the following content:
