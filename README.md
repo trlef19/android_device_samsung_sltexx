@@ -61,7 +61,11 @@ Copyright (C) 2014-2017 Andreas Schneider <asn@cryptomilk.org>
    ```console
    repo sync -j8
    ```
-  
+or
+ ```console
+ repo sync -c -j8
+ ```
+  If you wanna download only the current branch
   - Setup environment
 
    ```console
