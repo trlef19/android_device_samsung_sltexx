@@ -65,7 +65,8 @@ or
  ```console
  repo sync -c -j8
  ```
-  If you wanna download only the current branch
+  If you only want to download the **current** branch
+  
   - Setup environment
 
    ```console
